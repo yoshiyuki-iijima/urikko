@@ -1,2 +1,6 @@
-import SellerApp from '@/components/SellerApp';
-export default function Page() { return <SellerApp />; }
+'use client';
+import dynamic from 'next/dynamic';
+const SellerApp = dynamic(() => import('@/components/SellerApp'), { ssr: false });
+export default function SellerPage() {
+  return <SellerApp />;
+}

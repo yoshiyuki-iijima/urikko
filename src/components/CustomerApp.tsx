@@ -2,6 +2,23 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, MapPin, Clock, Plus, Minus, Beer, Users, Star, ChevronRight, Check, Heart, Zap, Receipt, Package, History, Gift } from 'lucide-react';
 
+// ===== 商品マスタ =====
+const BEERS = [
+  { id: 'beer-premol',   name: 'サントリープレモル',         price: 800, color: '#D4AF37', emoji: '🍺', category: 'beer' },
+  { id: 'beer-superdry', name: 'アサヒスーパードライ',       price: 800, color: '#C0392B', emoji: '🍺', category: 'beer' },
+  { id: 'beer-ichiban',  name: 'キリン一番搾り',             price: 800, color: '#E67E22', emoji: '🍺', category: 'beer' },
+  { id: 'beer-yebisu',   name: 'エビスビール',               price: 800, color: '#8B4513', emoji: '🍺', category: 'beer' },
+  { id: 'beer-premium',  name: 'サントリープレミアムモルツ', price: 800, color: '#B8860B', emoji: '🍺', category: 'beer' },
+  { id: 'beer-highball', name: '角ハイボール',               price: 800, color: '#F39C12', emoji: '🥃', category: 'beer' },
+];
+const SNACKS = [
+  { id: 'snack-kakipi',  name: '柿ピー',   price: 300, color: '#E74C3C', emoji: '🥜', category: 'snack' },
+  { id: 'snack-cheese',  name: 'チーズ',   price: 300, color: '#F1C40F', emoji: '🧀', category: 'snack' },
+  { id: 'snack-sakiika', name: 'さきいか', price: 300, color: '#E59866', emoji: '🦑', category: 'snack' },
+];
+const ALL_PRODUCTS = [...BEERS, ...SNACKS];
+const getProduct = (id) => ALL_PRODUCTS.find(p => p.id === id);
+
 // ===== ダミーデータ =====
 const STADIUMS = [
   { id: 'jingu',    name: '神宮球場',  subtitle: '東京ヤクルトスワローズ', image: '⚾' },

@@ -632,7 +632,6 @@ function AnalysisView({ stadium }) {
   const productMax = Math.max(...d.productSales.map(p => p.revenue));
   const areaMax = Math.max(...d.areaSales.map(a => a.sales));
 
-  const periodData = period === 'today' ? d.today : period === 'month' ? d.month : d.allTime;
   const multiplier = period === 'today' ? 1 : period === 'month' ? 26 : 182;
 
   const pieData = d.productSales.map(p => ({ ...p, share: p.revenue / totalProductSales }));
@@ -657,8 +656,6 @@ function AnalysisView({ stadium }) {
       );
     });
   };
-
-  const multiplier = period === 'today' ? 1 : period === 'month' ? 26 : 182;
 
   return (
     <div className="view-scroll">

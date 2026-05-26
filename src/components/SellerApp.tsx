@@ -17,7 +17,7 @@ const SNACKS = [
   { id: 'snack-sakiika', name: 'さきいか', price: 300, emoji: '🦑' },
 ];
 const ALL_PRODUCTS = [...BEERS, ...SNACKS];
-const getProduct = (id) => ALL_PRODUCTS.find(p => p.id === id);
+const getProduct = (id) => ALL_PRODUCTS.find(p => p.id === id) || ALL_PRODUCTS[0];
 const isBeerId = (id) => id.startsWith('beer-');
 
 // ===== デモアカウントマスタ =====

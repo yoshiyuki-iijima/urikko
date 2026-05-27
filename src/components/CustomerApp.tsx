@@ -252,7 +252,7 @@ export default function UrikkoCustomerApp() {
         {/* 前景: キャラクター + ロゴ */}
         <div className="hero-content">
           <div className="hero-character">
-            <img src="urikko-character.png" alt="うりっこ" />
+            <img src="/urikko-character.png" alt="うりっこ" />
           </div>
           <div className="hero-title-block">
             <h1 className="logo-text">Urikko</h1>
